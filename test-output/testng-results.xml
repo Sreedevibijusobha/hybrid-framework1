@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-04T11:58:35 IST" name="Default suite" finished-at="2024-04-04T11:58:47 IST" duration-ms="12252">
+  <suite started-at="2024-04-04T13:00:49 IST" name="Default suite" finished-at="2024-04-04T13:01:14 IST" duration-ms="25156">
     <groups>
     </groups>
-    <test started-at="2024-04-04T11:58:35 IST" name="Default test" finished-at="2024-04-04T11:58:47 IST" duration-ms="12252">
-      <class name="com.allianz.test.LoginUITest">
-        <test-method signature="applicationDescriptionTest()[pri:0, instance:com.allianz.test.LoginUITest@47e2e487]" started-at="2024-04-04T11:58:35 IST" name="applicationDescriptionTest" finished-at="2024-04-04T11:58:47 IST" duration-ms="12086" status="PASS">
+    <test started-at="2024-04-04T13:00:49 IST" name="Default test" finished-at="2024-04-04T13:01:14 IST" duration-ms="25156">
+      <class name="com.allianz.test.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.allianz.test.LoginTest@4c1909a3]" started-at="2024-04-04T13:00:49 IST" name="setup" finished-at="2024-04-04T13:01:01 IST" duration-ms="11499" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- applicationDescriptionTest -->
-      </class> <!-- com.allianz.test.LoginUITest -->
+        </test-method> <!-- setup -->
+        <test-method signature="invalidLoginTest()[pri:0, instance:com.allianz.test.LoginTest@4c1909a3]" started-at="2024-04-04T13:01:01 IST" name="invalidLoginTest" finished-at="2024-04-04T13:01:04 IST" duration-ms="3354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.allianz.test.LoginTest@4c1909a3]" started-at="2024-04-04T13:01:04 IST" name="teardown" finished-at="2024-04-04T13:01:04 IST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.allianz.test.LoginTest@4c1909a3]" started-at="2024-04-04T13:01:04 IST" name="setup" finished-at="2024-04-04T13:01:11 IST" duration-ms="7002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:0, instance:com.allianz.test.LoginTest@4c1909a3]" started-at="2024-04-04T13:01:11 IST" name="validLoginTest" finished-at="2024-04-04T13:01:14 IST" duration-ms="2809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.allianz.test.LoginTest@4c1909a3]" started-at="2024-04-04T13:01:14 IST" name="teardown" finished-at="2024-04-04T13:01:14 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.allianz.test.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
