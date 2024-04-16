@@ -12,6 +12,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.allianz.base.AutomationWrapper;
+import com.allianz.utils.DataUtils;
 
 public class LoginTest extends AutomationWrapper{
 		
@@ -45,7 +46,7 @@ public class LoginTest extends AutomationWrapper{
 	}
 	
 
-	@Test(dataProvider = "invalidData")
+	@Test(dataProvider = "invalidData",dataProviderClass=DataUtils.class)
 	
 	public void invalidLoginTest(String username, String password, String expectedError)
 	{
