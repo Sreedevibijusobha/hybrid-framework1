@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.allianz.base.AutomationWrapper;
@@ -24,16 +25,36 @@ public class LoginTest extends AutomationWrapper{
 	System.out.println("Text= "+actualText);
 	Assert.assertEquals(actualText, "Dashboard");
 	}
-	@Test
 	
-	public void invalidLoginTest()
+@DataProvider
+	
+	public Object[][] invalidData()
 	{
-	driver.findElement(By.name("username")).sendKeys("test");
-	driver.findElement(By.name("password")).sendKeys("admin123");
+		Object[][] data = new Object[2][3];
+		
+		data[0][0]="saul";
+		data[0][1]="saul123";
+		data[0][2]="Invalid credentials";
+		
+		data[1][0]="peter";
+		data[1][1]="peter123";
+		data[1][2]="Invalid credentials";
+
+		
+		return data;
+	}
+	
+
+	@Test(dataProvider = "invalidData")
+	
+	public void invalidLoginTest(String username, String password, String expectedError)
+	{
+	driver.findElement(By.name("username")).sendKeys(username);
+	driver.findElement(By.name("password")).sendKeys(password);
 	driver.findElement(By.xpath("//button[@type='submit']")).click();
 	String actualText=driver.findElement(By.xpath("//p[text()='Invalid credentials']")).getText();
 	System.out.println("Text= "+actualText);
-	Assert.assertEquals(actualText, "Invalid credentials");
+	Assert.assertEquals(actualText, expectedError);
 	}
 
 }
