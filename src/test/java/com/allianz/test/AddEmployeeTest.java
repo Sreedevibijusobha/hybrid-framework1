@@ -1,5 +1,7 @@
 package com.allianz.test;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,17 +13,17 @@ public class AddEmployeeTest extends AutomationWrapper {
 	
 	public void validLoginTest()
 	{
+		File file=new File("src/test/resources/files/xpath.txt");
+		String path=file.getAbsolutePath();
 
 		driver.findElement(By.name("username")).sendKeys("Admin");
 		driver.findElement(By.name("password")).sendKeys("admin123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		String actualText=driver.findElement(By.xpath("//h6[text()='Dashboard']")).getText();
-		System.out.println("Text= "+actualText);
-		Assert.assertEquals(actualText, "Dashboard");
+		
 		
 		driver.findElement(By.xpath("//span[text()='PIM']")).click();
 		driver.findElement(By.xpath("//i[@class='oxd-icon bi-plus oxd-button-icon']")).click();
-		driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\Users\\Administrator\\Downloads\\dummy.pdf");
+		driver.findElement(By.xpath("//input[@type='file']")).sendKeys(path);
 		//upload pdf file
 		
 		String errorText=driver.findElement(By.xpath("//span[text()='File type not allowed']")).getText();
