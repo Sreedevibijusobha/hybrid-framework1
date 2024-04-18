@@ -21,7 +21,7 @@ public class AddEmployeeTest extends AutomationWrapper {
 		
 		driver.findElement(By.xpath("//span[text()='PIM']")).click();
 		driver.findElement(By.xpath("//i[@class='oxd-icon bi-plus oxd-button-icon']")).click();
-		driver.findElement(By.xpath("//i[@class='oxd-icon bi-plus']")).sendKeys("CC:\\Users\\Administrator\\eclipse-workspace\\SeleniumConcept\\xpath");
+		driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\Users\\Administrator\\Downloads\\dummy.pdf");
 		//upload pdf file
 		
 		String errorText=driver.findElement(By.xpath("//span[text()='File type not allowed']")).getText();
