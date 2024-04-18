@@ -20,6 +20,6 @@ public class AutomationWrapper {
 		@AfterMethod
 		public void teardown()
 		{
-			driver.quit();
+		//	driver.quit();
 		}
 }
