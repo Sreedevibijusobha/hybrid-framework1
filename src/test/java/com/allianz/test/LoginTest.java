@@ -17,7 +17,7 @@ import com.allianz.utils.DataUtils;
 public class LoginTest extends AutomationWrapper{
 		
 	@Test	
-	public void validLoginTest()
+	public void validLoginTest(String username, String password, String expectedHeader)
 	{
 	driver.findElement(By.name("username")).sendKeys("Admin");
 	driver.findElement(By.name("password")).sendKeys("admin123");

@@ -26,11 +26,11 @@ public class ZDemo2ExcelTest {
 			for(int c=0;c<cellCount;c++)
 			{
 				
-			//String value=sheet.getRow(r).getCell(c).getStringCellValue();
-			//	System.out.println(value);
-			//	data[r-1][c]=value;
+			String value=sheet.getRow(r).getCell(c).getStringCellValue();
+				System.out.println(value);
+				data[r-1][c]=value;
 				
-				data[r-1][c]=format.formatCellValue(sheet.getRow(r).getCell(c));
+			//	data[r-1][c]=format.formatCellValue(sheet.getRow(r).getCell(c));
 			}
 		}
 	//	System.out.println(data);
