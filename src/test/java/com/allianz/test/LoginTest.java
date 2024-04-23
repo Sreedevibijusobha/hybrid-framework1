@@ -19,6 +19,10 @@ public class LoginTest extends AutomationWrapper{
 	@Test(dataProvider="commonDataProvider",dataProviderClass=DataUtils.class)
 	public void validLoginTest(String username, String password, String expectedHeader)
 	{
+		
+		//LoginPage.enterUsername(driver,username);
+		//LoginPage.enterpassword(driver,password);
+		//LoginPage.clickonlogin(driver);
 	driver.findElement(By.name("username")).sendKeys(username);
 	driver.findElement(By.name("password")).sendKeys(password);
 	driver.findElement(By.xpath("//button[@type='submit']")).click();
