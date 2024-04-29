@@ -5,44 +5,48 @@ import org.openqa.selenium.WebDriver;
 
 import com.allianz.base.WebDriverKeywords;
 
-public class LoginPage extends WebDriverKeywords{
-	private By usernameLocator=By.name("username");
-	private By passwordLocator=By.name("password");
-	private By loginLocator=By.xpath("//button[@type='submit']");
-	private By errorLocator=By.xpath("//p[text()='Invalid credentials']");
+public class LoginPage extends WebDriverKeywords {
+	private By usernameLocator = By.name("username");
+	private By passwordLocator = By.name("password");
+	private By loginLocator = By.xpath("//button[normalize-space()='Login']");
+	private By errorLocator = By.xpath("//p[contains(normalize-space(),'Invalid')]");
+
 	private WebDriver driver;
-	
-	public LoginPage(WebDriver driver)
-	{super(driver);
-		this.driver=driver;
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
 	}
-	
-	public void enterUsername(WebDriver driver,String username)
-	{ 
-	
-		//super.setInputText(usernameLocator, username);
-		this.driver.findElement(usernameLocator).sendKeys(username);
+
+	public void enterUsername(String username) {
+		// this.driver.findElement(usernameLocator).sendKeys(username);
+		super.setInputText(usernameLocator, username);
 	}
-	public void enterpassword(WebDriver driver,String password)
-	{  //setInputText(passwordLocator, password);
-		driver.findElement(passwordLocator).sendKeys(password);
+
+	public void enterPassword(String password) {
+//		driver.findElement(passwordLocator).sendKeys(password);
+		setInputText(passwordLocator, password);
 	}
-	public void clickonlogin(WebDriver driver)
-	{
-		
-	driver.findElement(loginLocator).click();
+
+	public void clickOnLogin() {
+//		driver.findElement(loginLocator).click();
+		clickElement(loginLocator);
 	}
-public String getInvalidErrorMesssage()
-{
-	return driver.findElement(errorLocator).getText();
-	
-}
-public String getUsernamePlaceholder()
-{
-	return driver.findElement(By.name("username")).getAttribute("placeholder");
-}
-public String getPasswordPlaceholder()
-{
-	return driver.findElement(By.name("password")).getAttribute("placeholder");
-}
+
+	public String getInvalidErrorMessage() {
+		//return driver.findElement(errorLocator).getText();
+		return super.getText(errorLocator);
+	}
+
+	public String getUsernamePlaceholder() {
+		//return driver.findElement(usernameLocator).getAttribute("placeholder");
+		return getAttributValue(usernameLocator, "placeholder");
+	}
+
+	public String getPasswordPlaceholder() {
+		//return driver.findElement(passwordLocator).getAttribute("placeholder")
+		return getAttributValue(passwordLocator, "placeholder");
+	}
+	// getHeader()
+	// clickOnForgotPassword()
 }

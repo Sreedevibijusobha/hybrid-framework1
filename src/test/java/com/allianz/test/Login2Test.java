@@ -19,31 +19,29 @@ import com.allianz.utils.DataUtils;
 public class Login2Test extends AutomationWrapper{
 		
 	@Test(dataProvider="commonDataProvider",dataProviderClass=DataUtils.class)
-	public void validLoginTest(String username, String password, String expectedHeader)
-	{
-		LoginPage Loginpage = new LoginPage(driver);
-		Loginpage.enterUsername(driver,username);
-		Loginpage.enterpassword(driver,password);
-		Loginpage.clickonlogin(driver);
-		
-		DashboardPage DashboardPage = new DashboardPage(driver);
-    String actualText=DashboardPage.getDashboardHeader();
-	System.out.println("Text= "+actualText);
-	Assert.assertEquals(actualText, expectedHeader);
-	}
-	
-	
-	@Test(dataProvider = "commonDataProvider",dataProviderClass=DataUtils.class)
-	
-	public void invalidLoginTest(String username, String password, String expectedError)
-	{
-		LoginPage Loginpage = new LoginPage(driver);
-		Loginpage.enterUsername(driver,username);
-		Loginpage.enterpassword(driver,password);
-		Loginpage.clickonlogin(driver);
-		String actualText=Loginpage.getInvalidErrorMesssage();
-	System.out.println("Text= "+actualText);
-	Assert.assertEquals(actualText, expectedError);
-	}
+	public class LoginTest extends AutomationWrapper {
+		@Test(dataProvider = "commonDataProvider", dataProviderClass = DataUtils.class)
+		public void validLoginTest(String username, String password, String expectedHeader) {
 
+			LoginPage loginPage = new LoginPage(driver);
+			loginPage.enterUsername(username);
+			loginPage.enterPassword(password);
+			loginPage.clickOnLogin();
+
+			DashboardPage dashboardPage=new DashboardPage(driver);
+			String actualHeader = dashboardPage.getDashboardHeader();
+			Assert.assertEquals(actualHeader, expectedHeader);
+		}
+
+		@Test(dataProvider = "commonDataProvider", dataProviderClass = DataUtils.class)
+		public void invalidLoginTest(String username, String password, String expectedError) {
+			LoginPage loginPage = new LoginPage(driver);
+			loginPage.enterUsername(username);
+			loginPage.enterPassword(password);
+			loginPage.clickOnLogin();
+			
+			String actualError =loginPage.getInvalidErrorMessage();
+			Assert.assertEquals(actualError, expectedError);
+		}
+	}
 }

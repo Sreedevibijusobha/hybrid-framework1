@@ -9,7 +9,7 @@ import com.sun.org.apache.bcel.internal.classfile.Method;
 public class DataUtils {
 @DataProvider
 	
-public Object[][] invalidData()
+public Object[][] invalidLoginData()
 	{
 	Object[][] data = new Object[2][3];
 	
