@@ -8,40 +8,17 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">68</td><td></td><td></td></tr>
+<tr><th colspan="8">Orange HRM Suite</th></tr>
+<tr><td><a href="#t0">UI Edge Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">21,580</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">UI Chrome Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">18,282</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">39,862</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.allianz.test.Login2Test</td><td><a href="#m0">invalidLoginTest</a></td><td rowspan="1">1714029114845</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Orange HRM Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">UI Edge Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.allianz.test.LoginUITest</td><td><a href="#m0">applicationDescriptionTest</a></td><td rowspan="1">1714462341304</td><td rowspan="1">740</td></tr><tr class="passedeven"><td><a href="#m1">titleTest</a></td><td rowspan="1">1714462349443</td><td rowspan="1">14</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">UI Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.allianz.test.LoginUITest</td><td><a href="#m2">applicationDescriptionTest</a></td><td rowspan="1">1714462357014</td><td rowspan="1">699</td></tr><tr class="passedeven"><td><a href="#m3">titleTest</a></td><td rowspan="1">1714462368907</td><td rowspan="1">13</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.allianz.test.Login2Test#invalidLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Some DataProvider public java.lang.Object[][] com.allianz.utils.DataUtils.commonDataProvider(com.sun.org.apache.bcel.internal.classfile.Method) throws java.io.IOException parameters unresolved:  at 0 type class com.sun.org.apache.bcel.internal.classfile.Method
-
-	at org.testng.internal.invokers.MethodInvocationHelper.getParameters(MethodInvocationHelper.java:237)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:156)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:812)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:737)
-	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:915)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>UI Edge Test</h2><h3 id="m0">com.allianz.test.LoginUITest#applicationDescriptionTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.allianz.test.LoginUITest#titleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>UI Chrome Test</h2><h3 id="m2">com.allianz.test.LoginUITest#applicationDescriptionTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.allianz.test.LoginUITest#titleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
