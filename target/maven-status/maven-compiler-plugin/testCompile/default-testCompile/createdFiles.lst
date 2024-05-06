@@ -1,0 +1,17 @@
+com\allianz\test\AddEmployeeTest.class
+com\allianz\test\Login2Test$LoginTest.class
+com\allianz\utils\DataUtils.class
+com\allianz\page\ResetPasswordPage.class
+com\allianz\test\LoginTest.class
+com\allianz\base\AutomationWrapper.class
+com\allianz\test\Login2Test.class
+com\allianz\test\ZDemoExcelTest.class
+com\allianz\page\LoginPage.class
+com\allianz\test\LoginUITest.class
+com\allianz\test\ZDemoTest.class
+com\allianz\page\MainPage.class
+com\allianz\page\DashboardPage.class
+com\allianz\utils\ExcelUtils.class
+com\allianz\base\WebDriverKeywords.class
+com\allianz\page\PIMPage.class
+com\allianz\test\ZDemo2ExcelTest.class
